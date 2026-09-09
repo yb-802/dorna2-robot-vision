@@ -11,7 +11,7 @@
    - 透過大語言模型自動提取目標物件，並映射至標準目標類別（如 COCO 80 類）。
 
 2. **YOLOv7 視覺辨識與 3D 空間定位 (YOLOv7 & Depth Registration)**：
-   - 使用 Intel RealSense 深度相機擷取 Color 與 Depth 影像並進行 Alignment 對齊。
+   - 使用 Intel RealSense 深度相機擷取 Color 與 Depth 影像並進行對齊。
    - 利用 YOLOv7 計算物件 2D 邊界框（Bounding Box）與中心像素座標 $(u, v)$。
    - 透過相機內參 (Intrinsics) 與深度資訊 $d$ 轉換為相機座標系下的三維座標 $(X_c, Y_c, Z_c)$。
 
