@@ -87,13 +87,14 @@ $$P_{camera} = 	ext{deproject\_pixel\_to\_point}(	ext{intrinsics}, [u, v], d)$$
 $$P_{robot} = R_2 \cdot R_1 \cdot P_{camera} + t$$
 
 ### 3. 逆運動學 (IK) 關節角求解
-- **基座角度 $	heta_0$**: $	heta_0 =  rctan2(y, x)$
-- **肘部關節 $	heta_2$**: 利用餘弦定理求解 $	heta_2 = - rccos\left(rac{x^2 + z^2 - L_1^2 - L_2^2}{2 L_1 L_2}
-ight)$
-- **肩部關節 $	heta_1$**: $	heta_1 =  rctan2(z, x) -  rctan2\left(rac{L_2 \sin	heta_2}{L_1 + L_2 \cos	heta_2}
-ight)$
-- **末端姿態角 $	heta_3$**: $	heta_3 = 	ext{target\_angle} - 	heta_1 - 	heta_2$
-
+* **基座角度 $\theta_0$**：
+  $$\theta_0 = \arctan2(y, x)$$
+* **肘部關節 $\theta_2$**：利用餘弦定理求解
+  $$\theta_2 = -\arccos\left(\frac{x^2 + z^2 - L_1^2 - L_2^2}{2 L_1 L_2}\right)$$
+* **肩部關節 $\theta_1$**：
+  $$\theta_1 = \arctan2(z, x) - \arctan2\left(\frac{L_2 \sin \theta_2}{L_1 + L_2 \cos \theta_2}\right)$$
+* **末端姿態角 $\theta_3$**：
+  $$\theta_3 = \text{target\_angle} - \theta_1 - \theta_2$$
 ---
 
 ## 👤 開發資訊
