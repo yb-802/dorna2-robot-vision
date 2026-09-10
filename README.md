@@ -94,7 +94,7 @@ $$P_{robot} = R_2 \cdot R_1 \cdot P_{camera} + t$$
 * **肩部關節 $\theta_1$**：
   $$\theta_1 = \arctan2(z, x) - \arctan2\left(\frac{L_2 \sin \theta_2}{L_1 + L_2 \cos \theta_2}\right)$$
 * **末端姿態角 $\theta_3$**：
-  $$\theta_3 = \text{target\_angle} - \theta_1 - \theta_2$$
+  $$\theta_3 = \theta_{\text{target}} - \theta_1 - \theta_2$$
 ---
 
 ## 👤 開發資訊
